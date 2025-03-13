@@ -1,11 +1,10 @@
 import React from 'react'
 
-import ClassComponentExample from './components/classComponent'
-
+import Counter from './components/counter'
 function App() {
   return (
     <>
-      <ClassComponentExample />
+      <Counter />
     </>
   )
 }
