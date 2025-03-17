@@ -1,7 +1,4 @@
-import React, { use } from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { jsx } from 'react/jsx-runtime';
+import React, { useEffect, useState } from 'react'
 
 function App() {
   const [users, setUsers] = useState(null);
@@ -20,9 +17,9 @@ function App() {
     console.log(users);
   }, [users])
 
-  const filteredData = users.filter((user) => {
+  const filteredData = users ? users.filter((user) => {
     return user.name.toLowerCase().includes('a');
-  })
+  }) : [];
 
   console.log(filteredData);
   return (
