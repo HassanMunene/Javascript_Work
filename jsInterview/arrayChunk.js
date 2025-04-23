@@ -1,3 +1,7 @@
+// This function divides an array into sub arrays of the specified sizes.
+// And stores the results in the outer parent array.
+
+
 let parentArr = [];
 
 function chunkArray(arr, num) {

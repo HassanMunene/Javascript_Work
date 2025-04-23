@@ -13,5 +13,3 @@ function checkPalindrome(str) {
 
 const value = checkPalindrome("hassan");
 console.log(value);
-
-

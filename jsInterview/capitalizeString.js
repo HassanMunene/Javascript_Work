@@ -1,6 +1,7 @@
 function capitalizeString(str) {
     //fist convert the string to an array
     const arr = str.split('');
+    console.log(arr);
 
     //loop through the array to convert some letters to uppercase
     for (let i = 0; i < arr.length; i++) {
