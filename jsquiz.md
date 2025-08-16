@@ -336,7 +336,55 @@ An IIFE (Immediately Invoked Function Expression) is a JavaScript function that 
 ```
 
 
-    What is the difference between function declaration and function expression?
+## What is the difference between function declaration and function expression?
+In JavaScript, function declarations and function expressions are two ways to define functions, but they differ in syntax, hoisting behavior and usage. Here’s a breakdown of their key differences:
+
+1. Syntax
+Function Declaration
+    Defined using the function keyword as a standalone statement.
+    Must have a name (cannot be anonymous).
+
+    ```
+    function greet() {
+        console.log("Hello!");
+    }
+    ```
+
+Function Expression
+    Defined inside an expression (e.g., assigned to a variable).
+    Can be named or anonymous.
+    ```
+    // Anonymous function expression
+    const greet = function() {
+        console.log("Hello!");
+    };
+
+    // Named function expression (useful for debugging)
+    const greet = function sayHello() {
+        console.log("Hello!");
+    };
+    ```
+
+2. Hoisting
+Function Declaration
+    Hoisted to the top of their scope.
+    Can be called before the declaration.
+    ```
+    greet(); // Works (due to hoisting)
+    function greet() {
+        console.log("Hello!");
+    }
+    ```
+
+Function Expression
+    Not hoisted. Behaves like a variable (e.g., const/let), so it cannot be called before definition.
+    ```
+    greet(); // Error: greet is not defined (e.g., "Cannot access before initialization")
+    const greet = function() {
+        console.log("Hello!");
+    };
+    ```
+
 
     What is closure in JavaScript?
 
