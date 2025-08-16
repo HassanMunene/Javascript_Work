@@ -336,7 +336,6 @@ An IIFE (Immediately Invoked Function Expression) is a JavaScript function that 
 ```
 
 
-
     What is the difference between function declaration and function expression?
 
     What is closure in JavaScript?
