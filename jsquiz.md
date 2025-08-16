@@ -322,10 +322,24 @@ In JavaScript, the this keyword refers to the context in which a function is exe
     ```
 
 ## What is an IIFE (Immediately Invoked Function Expression)?
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. It’s a design pattern used to create a local scope and avoid polluting the global namespace.
+
+```
+(function() {
+  // Code here runs immediately
+})();
+
+// With arrow functions (ES6+)
+(() => {
+  // Code here runs immediately
+})();
+```
+
+
 
     What is the difference between function declaration and function expression?
 
-    What is closure in JavaScript? (Basic Explanation)
+    What is closure in JavaScript?
 
     What is event bubbling and event capturing?
 
