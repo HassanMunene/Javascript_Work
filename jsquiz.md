@@ -48,6 +48,19 @@ Comparison	Compared by value (5 === 5)	Compared by reference ({} !== {})
 
 
 ## What is the difference between == and ===?
+1. == (Loose Equality)
+
+    Checks value only (performs type coercion if types differ).
+
+    Converts types automatically before comparison.
+
+    Can lead to unexpected results due to hidden type conversions.
+
+2. === (Strict Equality)
+
+    Checks both value and type (no type coercion).
+
+    Safer and more predictable (recommended in most cases).
 
     What is NaN in JavaScript?
 
