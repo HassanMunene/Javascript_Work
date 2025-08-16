@@ -1,6 +1,26 @@
-    What is JavaScript?
+## What is JavaScript?
+JavaScript (often abbreviated as JS) is a high-level, dynamic, and interpreted programming language primarily used for:
 
-    What are the data types in JavaScript?
+    - Adding interactivity to websites (e.g., buttons, forms, animations).
+
+    - Building web applications (frontend frameworks like React, Vue, Angular).
+
+    - Server-side development (Node.js).
+
+    - Mobile apps (React Native, Ionic).
+
+    - Game development (using libraries like Phaser, Three.js).
+
+Key Features of JavaScript:
+
+✔ Multi-paradigm – Supports procedural, object-oriented, and functional programming.
+✔ Single-threaded but non-blocking (uses an event loop for asynchronous operations).
+✔ Runs in the browser (via engines like V8, SpiderMonkey) and on servers (Node.js).
+✔ Dynamically typed (variables don’t need type declarations).
+✔ Prototype-based inheritance (instead of classical inheritance like Java/C++).
+
+
+## What are the data types in JavaScript?
 
     What is the difference between == and ===?
 
