@@ -162,9 +162,54 @@ Best Practices
 ✔ Prefer function declarations if hoisting is needed.
 
 
+## What is the difference between let, const, and var?
+These keywords are used for variable declaration, but they differ in scoping, hoisting, and mutability.
 
+1. var (Legacy, Avoid in Modern Code)
+    Scope: Function-scoped (or global if declared outside a function).
+    Hoisting: Hoisted and initialized with undefined.
+    Reassignment: Allowed.
+    Redeclaration: Allowed (can cause bugs).
 
-    What is the difference between let, const, and var?
+    ```
+    var x = 10;
+    var x = 20; // No error (redeclaration allowed)
+    if (true) {
+        var x = 30; // Same variable (no block scope)
+    }
+    console.log(x); // 30 (leaks outside blocks)
+    ```
+
+2. let (Modern, Block-Scoped, Mutable)
+    Scope: Block-scoped ({}).
+    Hoisting: Hoisted but not initialized (Temporal Dead Zone).
+    Reassignment: Allowed.
+    Redeclaration: Not allowed in the same scope.
+    ```
+    let y = 10;
+    y = 20; // OK (reassignment allowed)
+    let y = 30; // ❌ SyntaxError (no redeclaration)
+    if (true) {
+        let y = 40; // New variable (block-scoped)
+    }
+    console.log(y); // 20 (outer scope unaffected)
+    ```
+
+3. const (Modern, Block-Scoped, Immutable Reference)
+    Scope: Block-scoped ({}).
+    Hoisting: Hoisted but not initialized (Temporal Dead Zone).
+    Reassignment: ❌ Not allowed (for primitives).
+    Redeclaration: ❌ Not allowed.
+    ```
+    const z = 10;
+    z = 20; // ❌ TypeError (reassignment prohibited)
+    const z = 30; // ❌ SyntaxError (no redeclaration)
+    if (true) {
+        const z = 40; // New variable (block-scoped)
+    }
+    console.log(z); // 10 (outer scope unaffected)
+    ```
+
 
     What is an arrow function? How is it different from a regular function?
 
