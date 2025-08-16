@@ -210,10 +210,46 @@ These keywords are used for variable declaration, but they differ in scoping, ho
     console.log(z); // 10 (outer scope unaffected)
     ```
 
+## What is an arrow function? How is it different from a regular function?
+An arrow function is a concise syntax for writing functions in JavaScript, introduced in ES6 (ECMAScript 2015). It provides a shorter syntax compared to regular functions and has some key differences in behavior.
 
-    What is an arrow function? How is it different from a regular function?
+Arrow function: Inherits this from the enclosing (parent) scope.
+```
+const obj = {
+  name: "Alice",
+  greet: () => {
+    console.log(this.name); // `this` refers to the global/window object (not obj)
+  }
+};
+obj.greet(); // Output: undefined (or throws in strict mode)
+```
+Regular function: Has its own this, determined by how it's called.
+```
+const obj = {
+  name: "Alice",
+  greet: function() {
+    console.log(this.name); // `this` refers to `obj`
+  }
+};
+obj.greet(); // Output: "Alice"
+```
 
-    What is the this keyword in JavaScript?
+Arrow function: Does not have its own arguments object.
+```
+const showArgs = () => {
+  console.log(arguments); // Error: arguments is not defined
+};
+showArgs(1, 2, 3);
+```
+Regular function: Has access to the arguments object.
+```
+function showArgs() {
+  console.log(arguments); // { 0: 1, 1: 2, 2: 3 }
+}
+showArgs(1, 2, 3);
+```
+
+## What is the this keyword in JavaScript?
 
     What is an IIFE (Immediately Invoked Function Expression)?
 
