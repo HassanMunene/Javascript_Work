@@ -250,8 +250,78 @@ showArgs(1, 2, 3);
 ```
 
 ## What is the this keyword in JavaScript?
+In JavaScript, the this keyword refers to the context in which a function is executed. Its value depends on how a function is called, not where it is defined. Understanding this is crucial because it behaves differently in different scenarios.
+### How this Works in Different Contexts
+1. Global Context (Default Binding)
+    In the global scope (outside any function), this refers to the global object:
+        Browser: window
+        Node.js: global
+    ```
+    console.log(this); // `window` (in browsers)
+    ```
 
-    What is an IIFE (Immediately Invoked Function Expression)?
+2. Function Context (Simple Function Call)
+    In a regular function, this refers to the global object (or undefined in strict mode).
+    ```
+    function showThis() {
+        console.log(this); // `window` (or `undefined` in strict mode)
+    }
+    showThis();
+    ```
+
+3. Method Context (Object Method Call)
+    When a function is called as a method of an object, this refers to the object itself.
+    ```
+    const person = {
+        name: "Alice",
+        greet: function() {
+            console.log(this.name); // "Alice" (`this` = `person`)
+        }
+    };
+    person.greet();
+    ```
+
+4. Constructor Context (with new)
+    When a function is called with the new keyword (as a constructor), this refers to the newly created instance.
+    ```
+    function Person(name) {
+        this.name = name; // `this` = the new object
+    }
+    const alice = new Person("Alice");
+    console.log(alice.name); // "Alice"
+    ```
+
+5. Explicit Binding (Using call, apply, bind)
+    You can force this to refer to a specific object using:
+    call() & apply() (immediate execution)
+    bind() (returns a new function with bound this)
+    ```
+    const user = { name: "Bob" };
+    
+    function greet() {
+        console.log(this.name);
+    }
+
+    greet.call(user);    // "Bob" (immediately calls `greet` with `this = user`)
+    greet.apply(user);   // "Bob" (same as `call` but takes args as an array)
+
+    const boundGreet = greet.bind(user); // Creates a new function with `this = user`
+    boundGreet(); // "Bob"
+    ```
+
+6. Arrow Functions (Lexical this)
+    Arrow functions do not have their own this. Instead, they inherit this from the surrounding (parent) scope.
+    ```
+    const person = {
+        name: "Alice",
+        greet: () => {
+            console.log(this.name); // `this` is from outer scope (e.g., `window`)
+        }
+    };
+    person.greet(); // undefined (or global object in non-strict mode)
+    ```
+
+## What is an IIFE (Immediately Invoked Function Expression)?
 
     What is the difference between function declaration and function expression?
 
