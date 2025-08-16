@@ -62,11 +62,107 @@ Comparison	Compared by value (5 === 5)	Compared by reference ({} !== {})
 
     Safer and more predictable (recommended in most cases).
 
-    What is NaN in JavaScript?
+## What is NaN in JavaScript?
+NaN stands for "Not a Number", but it’s a special value of the number type. It represents an invalid or undefined numerical result.
+Key Properties of NaN
 
-    What is undefined vs null?
+    Type: typeof NaN returns "number" (ironically).
 
-    What is hoisting in JavaScript?
+    Self-inequality: NaN === NaN → false (only value in JS that’s not equal to itself).
+
+    Global property: NaN is a property of the global object (window.NaN in browsers).
+
+    ```
+    0 / 0           // NaN
+    Math.sqrt(-1)   // NaN
+    "abc" * 5       // NaN (string → number fails)
+    parseInt("hello")  // NaN
+    Number("xyz")      // NaN
+    Infinity - Infinity  // NaN
+    ```
+
+## What is undefined vs null?
+1. undefined (Default Empty Value)
+    Meaning: A variable is declared but not assigned a value.
+    Type: typeof undefined → "undefined"
+    Common Causes:
+        A variable is declared but not initialized.
+        javascript
+```
+let x;
+console.log(x); // undefined
+```
+
+A function with no return value. javascript
+```
+function foo() {}
+console.log(foo()); // undefined
+```
+
+Accessing non-existent object properties.javascript
+
+```
+const obj = {};
+console.log(obj.name); // undefined
+```
+
+2. null (Intentional Absence of Value)
+Meaning: Explicitly set to indicate "no value" or "empty."
+Type: typeof null → "object" (⚠️ Historical bug in JS!)
+Common Uses:
+Manually resetting a variable to "empty."
+javascript
+
+```
+let y = "Hello";
+y = null; // Explicitly cleared
+```
+
+Indicating no object where one is expected. javascript
+
+        document.getElementById("non-existent-id"); // null
+
+Key Differences
+Feature	undefined	null
+Default State	Assigned by JS when no value is given	Must be explicitly set
+Type	"undefined"	"object" (bug)
+Use Case	Missing/unknown value	Intentional empty value
+Equality Check	undefined == null → true (loose)	undefined === null → false (strict)
+When to Use Which?
+
+✅ Use undefined when:
+    A variable or property naturally has no value yet.
+    JS automatically assigns it (e.g., uninitialized vars).
+
+✅ Use null when:
+    You intentionally want to represent "empty."
+    Working with DOM/APIs that return null (e.g., querySelector).
+
+
+## What is hoisting in JavaScript?
+Hoisting is JavaScript's behavior of moving variable and function declarations to the top of their scope before code execution.
+
+Key Rules:
+    var Declarations: Hoisted and initialized with undefined.
+    let & const Declarations: Hoisted but not initialized (Temporal Dead Zone).
+    Function Declarations: Fully hoisted (can be called before declaration).
+    Function Expressions: Not hoisted (depends on variable type).
+
+Why Does Hoisting Exist?
+
+    JavaScript’s two-phase execution:
+    Compilation Phase: Declarations are hoisted.
+    Execution Phase: Assignments and logic run.
+    Legacy behavior from early JS design.
+
+Best Practices
+
+✔ Use let/const to avoid unintended undefined values.
+✔ Declare variables at the top of their scope.
+✔ Prefer function declarations if hoisting is needed.
+
+
+
 
     What is the difference between let, const, and var?
 
