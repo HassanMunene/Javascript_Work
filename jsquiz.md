@@ -386,7 +386,43 @@ Function Expression
     ```
 
 
-    What is closure in JavaScript?
+## What is closure in JavaScript?
+In JavaScript, a closure is a function that has access to its own scope, the outer function's variables, and global variables—even after the outer function has finished executing.
+How Closures Work:
+
+```
+function outer() {
+  let outerVar = "I'm outside!";
+
+  function inner() {
+    console.log(outerVar); // Accesses outerVar from outer function's scope
+  }
+
+  return inner;
+}
+
+const closureFunc = outer(); // outer() has finished executing...
+closureFunc(); // But this still logs: "I'm outside!" (because of closure)
+```
+### Why Closures Are Useful:
+Data Privacy – Encapsulate variables that shouldn't be exposed.
+```
+function createCounter() {
+  let count = 0;
+  return function() {
+    return ++count;
+  };
+}
+const counter = createCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2 (count is private)
+```
+Currying & Partial Applications – Functions that return functions with preset arguments.
+Event Handlers & Callbacks – Maintain state in asynchronous operations.
+
+## When a function is defined inside another function, the inner function retains access to the outer function's variables.
+
+    Even if the outer function completes execution and its scope is gone, the inner function still "remembers" the outer variables.
 
     What is event bubbling and event capturing?
 
