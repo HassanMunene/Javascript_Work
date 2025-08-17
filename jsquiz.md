@@ -492,8 +492,59 @@ When to Use Which?
     
 
 ## What is the difference between call(), apply(), and bind()?
+In JavaScript, call(), apply(), and bind() are methods used to control the value of this inside a function and pass arguments. Here’s the key difference:
 
-    What is the DOM? How do you select elements in JavaScript?
+call()	Calls a function immediately with a given this value and individual arguments.	func.call(thisArg, arg1, arg2, ...)	Takes arguments one by one.
+
+apply()	Calls a function immediately with a given this value and arguments as an array.	func.apply(thisArg, [arg1, arg2])	Takes arguments as an array.
+
+bind()	Returns a new function with a bound this value (does not call immediately).	const newFunc = func.bind(thisArg)	Arguments can be passed later.
+
+1. call() – Invokes Immediately with Individual Arguments
+
+```
+function greet(message) {
+  console.log(`${message}, ${this.name}!`);
+}
+
+const user = { name: "Alice" };
+
+greet.call(user, "Hello"); // Output: "Hello, Alice!"
+```
+
+2. apply() – Invokes Immediately with Arguments as an Array
+```
+function introduce(greeting, punctuation) {
+  console.log(`${greeting}, I'm ${this.name}${punctuation}`);
+}
+
+const user = { name: "Bob" };
+
+introduce.apply(user, ["Hi", "!"]); // Output: "Hi, I'm Bob!"
+```
+
+3. bind() – Creates a New Function with Bound this (Lazy Execution)
+```
+function logAge() {
+  console.log(`${this.name} is ${this.age} years old.`);
+}
+
+const person = { name: "Charlie", age: 25 };
+
+const boundFunc = logAge.bind(person); // Returns a new function
+boundFunc(); // Output: "Charlie is 25 years old."
+```
+
+When to Use Which?
+
+    call() – When you know arguments individually.
+
+    apply() – When arguments are dynamic or in an array.
+
+    bind() – When you need a function reference with a fixed this (e.g., in React event handlers).
+
+
+## What is the DOM? How do you select elements in JavaScript?
 
 Medium Questions (Intermediate Concepts)
 
