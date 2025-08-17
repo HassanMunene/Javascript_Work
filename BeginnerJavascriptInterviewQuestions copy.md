@@ -596,7 +596,7 @@ Important Notes
 
 
 
-Medium Questions (Intermediate Concepts)
+# Medium Questions (Intermediate Concepts)
 
     What is the event loop in JavaScript?
 
