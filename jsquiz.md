@@ -545,6 +545,56 @@ When to Use Which?
 
 
 ## What is the DOM? How do you select elements in JavaScript?
+The DOM (Document Object Model) is a programming interface for web documents. It represents the structure of a web page as a tree of objects, where each object corresponds to a part of the page's structure (elements, attributes, text, etc.). The DOM allows JavaScript to:
+    Access and manipulate the content, structure, and style of a webpage
+    Dynamically update the page without reloading
+    Respond to user interactions
+
+Selecting Elements in JavaScript
+
+There are several methods to select elements from the DOM:
+1. Selecting Single Elements
+```
+// By ID (returns a single element)
+const element = document.getElementById('elementId');
+
+// By CSS selector (returns the first matching element)
+const element = document.querySelector('.className');
+const element = document.querySelector('div');
+const element = document.querySelector('#id');
+```
+2. Selecting Multiple Elements
+```
+// By class name (returns HTMLCollection)
+const elements = document.getElementsByClassName('className');
+
+// By tag name (returns HTMLCollection)
+const elements = document.getElementsByTagName('div');
+
+// By CSS selector (returns NodeList)
+const elements = document.querySelectorAll('.className');
+const elements = document.querySelectorAll('div, p');
+```
+
+3. Specialized Selectors
+```
+// Select forms by name
+const form = document.forms['formName'];
+
+// Select all links
+const links = document.links;
+
+// Select all images
+const images = document.images;
+```
+
+Important Notes
+    getElementById is the fastest method for single element selection
+    querySelector and querySelectorAll are more versatile as they accept any CSS selector
+    HTMLCollections are live collections (update when DOM changes), while NodeLists are generally static (except when using querySelectorAll with certain selectors)
+    You can chain selections from already selected elements: parentElement.querySelector('.child')
+
+
 
 Medium Questions (Intermediate Concepts)
 
