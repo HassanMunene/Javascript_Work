@@ -388,6 +388,9 @@ Function Expression
 
 ## What is closure in JavaScript?
 In JavaScript, a closure is a function that has access to its own scope, the outer function's variables, and global variables—even after the outer function has finished executing.
+When a function is defined inside another function, the inner function retains access to the outer function's variables.
+
+    Even if the outer function completes execution and its scope is gone, the inner function still "remembers" the outer variables.
 How Closures Work:
 
 ```
@@ -420,13 +423,75 @@ console.log(counter()); // 2 (count is private)
 Currying & Partial Applications – Functions that return functions with preset arguments.
 Event Handlers & Callbacks – Maintain state in asynchronous operations.
 
-## When a function is defined inside another function, the inner function retains access to the outer function's variables.
+## What is event bubbling and event capturing?
+In JavaScript, event bubbling and event capturing are two phases of event propagation in the DOM (Document Object Model) when an event (like a click) occurs on an element.
+1. Event Bubbling (Default)
 
-    Even if the outer function completes execution and its scope is gone, the inner function still "remembers" the outer variables.
+    The event starts from the target element and bubbles up to the root of the DOM.
 
-    What is event bubbling and event capturing?
+    Order: Innermost element → Parent → Grandparent → ... → document
 
-    What is the difference between call(), apply(), and bind()?
+    Example:
+    ```
+    <div id="grandparent">
+        <div id="parent">
+            <button id="child">Click me!</button>
+        </div>
+    </div>
+
+    document.getElementById("grandparent").addEventListener("click", () => {
+        console.log("Grandparent clicked");
+    });
+
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent clicked");
+    });
+
+    document.getElementById("child").addEventListener("click", () => {
+        console.log("Child clicked");
+    });
+    output:
+    Child clicked  
+    Parent clicked  
+    Grandparent clicked  
+    ```
+
+2. Event Capturing (Trickling)
+
+    The event starts from the root and trickles down to the target element.
+
+    Order: document → Grandparent → Parent → Innermost element
+
+    Requires setting { capture: true } in addEventListener().
+
+    Example:
+    ```
+    document.getElementById("grandparent").addEventListener("click", () => {
+        console.log("Grandparent captured");
+    }, { capture: true });
+
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("Parent captured");
+    }, { capture: true });
+
+    document.getElementById("child").addEventListener("click", () => {
+        console.log("Child captured");
+    }, { capture: true });
+
+    output:
+    Grandparent captured  
+    Parent captured  
+    Child captured  
+    ```
+Which One is Used by Default?
+Bubbling (unless capture: true is set).
+
+When to Use Which?
+    Bubbling: Common for event delegation (e.g., handling clicks on dynamically added elements).
+    Capturing: Rare, useful when you need to intercept events before they reach children.
+    
+
+## What is the difference between call(), apply(), and bind()?
 
     What is the DOM? How do you select elements in JavaScript?
 
