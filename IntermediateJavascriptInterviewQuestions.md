@@ -35,11 +35,64 @@ Promise
 Timeout
 ```
 
+## What are promises in JavaScript? How do they work?
+A Promise is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. Promises provide a cleaner alternative to callback-based asynchronous code, helping to avoid "callback hell."
+Promise States
+A promise can be in one of three states:
+    Pending: Initial state, neither fulfilled nor rejected
+    Fulfilled: The operation completed successfully
+    Rejected: The operation failed
 
-    What are promises in JavaScript? How do they work?
+Creating a Promise:
+```
+const myPromise = new Promise((resolve, reject) => {
+  // Asynchronous operation here
+  if (/* success */) {
+    resolve(value); // Fulfill the promise
+  } else {
+    reject(error); // Reject the promise
+  }
+});
+```
+Using Promises
+Basic Usage with .then() and .catch()
+```
+myPromise
+  .then(value => {
+    // Handle successful fulfillment
+    console.log(value);
+  })
+  .catch(error => {
+    // Handle rejection
+    console.error(error);
+  });
+```
 
-    What is async/await? How is it different from promises?
+How Promises Work Under the Hood
+When created, a promise is in the pending state
+The executor function runs immediately
+If the async operation succeeds, resolve() is called, transitioning to fulfilled
+If it fails, reject() is called, transitioning to rejected
+Callbacks registered with .then() or .catch() are placed in the microtask queue
+These callbacks execute when the call stack is empty (higher priority than regular tasks)
 
+## What is async/await? How is it different from promises?
+Async/await is syntactic sugar built on top of promises that makes asynchronous code look and behave more like synchronous code. It consists of two keywords:
+    async: Declares a function as asynchronous (always returns a promise)
+    await: Pauses execution until a promise settles (inside async functions only)
+
+Basic Syntax:
+```
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com/data');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error);
+  }
+}
+```
     What is the difference between setTimeout() and setInterval()?
 
     What is the difference between localStorage, sessionStorage, and cookies?
