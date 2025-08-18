@@ -171,9 +171,82 @@ Example:
 document.cookie = "token=abc123; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
 ```
 
-    What is CORS? How do you handle it?
+## What is CORS? How do you handle it?
+CORS stands for Cross-Origin Resource Sharing.
 
-    What is a higher-order function?
+By default, browsers enforce a security policy called the Same-Origin Policy (SOP).
+
+This means a web page can only make requests to the same domain (origin) it was loaded from.
+
+Origin = protocol + domain + port
+Example:
+
+https://example.com:443 and https://example.com:8080 are different origins because of the port.
+
+https://example.com and http://example.com are different origins because of the protocol.
+
+CORS is a mechanism that allows a server to tell the browser:
+“Hey, it’s okay for requests from https://myfrontend.com to access my resources.”
+
+Why is CORS needed?
+
+Imagine:
+
+You have a frontend running at http://localhost:3000
+
+Your API is running at http://localhost:5000
+When your frontend tries to fetch data from the API, the browser will block it unless the API explicitly allows it via CORS headers.
+
+How does CORS work?
+
+When making a cross-origin request, the browser may send a preflight request (an OPTIONS request) to the server to check if it’s allowed.
+The server responds with headers like:
+
+```
+Access-Control-Allow-Origin: https://myfrontend.com
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+```
+If the response allows it, the browser proceeds with the actual request. Otherwise, it blocks it.
+
+How to handle CORS
+1. On the server (most common and correct way)
+
+Configure your backend to send the proper headers.
+
+Node.js/Express Example:
+```
+import express from "express";
+import cors from "cors";
+
+const app = express();
+
+app.use(cors({ 
+  origin: "http://localhost:3000", // allow only this origin
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true // allow cookies/auth headers
+}));
+
+app.listen(5000, () => console.log("Server running"));
+```
+2. On the frontend
+
+You can’t really “solve” CORS from the frontend (it’s a browser security feature), but you can:
+
+Use a proxy (e.g., in React/Vite you can proxy API calls through the dev server).
+
+Example in vite.config.js:
+```
+export default defineConfig({
+  server: {
+    proxy: {
+      "/api": "http://localhost:5000"
+    }
+  }
+});
+```
+
+## What is a higher-order function?
 
     What is currying in JavaScript?
 
