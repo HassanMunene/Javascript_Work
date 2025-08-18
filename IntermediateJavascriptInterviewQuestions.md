@@ -111,7 +111,65 @@ setInterval(() => {
 }, 2000);
 ```
 
-    What is the difference between localStorage, sessionStorage, and cookies?
+## What is the difference between localStorage, sessionStorage, and cookies?
+
+1. localStorage
+
+What it is: A key–value storage available in the browser.
+
+Persistence: Data persists even after the browser is closed and reopened.
+
+Storage size: ~5–10 MB (depends on browser).
+
+Access: Only accessible on the client side (JavaScript).
+
+Expiration: Never expires automatically (unless cleared manually or by code).
+
+Example:
+```
+localStorage.setItem("username", "Hassan");
+console.log(localStorage.getItem("username")); // "Hassan"
+
+```
+
+2. sessionStorage
+
+What it is: Similar to localStorage, but tied to a single browser tab/session.
+
+Persistence: Data is cleared once the tab is closed (doesn’t survive page reload though).
+
+Storage size: ~5 MB.
+
+Access: Only accessible on the client side (JavaScript).
+
+Expiration: Ends when the tab or browser is closed.
+
+Example:
+```
+sessionStorage.setItem("theme", "dark");
+console.log(sessionStorage.getItem("theme")); // "dark"
+```
+
+3. Cookies
+
+What it is: Small pieces of data stored in the browser and sent to the server with every HTTP request.
+
+Persistence: Can be set to expire at a specific time/date, or be session-based.
+
+Storage size: ~4 KB max.
+
+Access:
+
+Client-side: via document.cookie (but less convenient than localStorage).
+
+Server-side: automatically included in HTTP requests, used for authentication/tracking.
+
+Expiration: Configurable (session or persistent).
+
+Example:
+```
+document.cookie = "token=abc123; expires=Fri, 31 Dec 2025 23:59:59 GMT; path=/";
+```
 
     What is CORS? How do you handle it?
 
