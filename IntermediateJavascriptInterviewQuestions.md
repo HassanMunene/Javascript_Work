@@ -93,7 +93,8 @@ async function fetchData() {
   }
 }
 ```
-    What is the difference between setTimeout() and setInterval()?
+
+What is the difference between setTimeout() and setInterval()?
 
     What is the difference between localStorage, sessionStorage, and cookies?
 
