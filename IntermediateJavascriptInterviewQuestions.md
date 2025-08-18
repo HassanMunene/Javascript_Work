@@ -247,6 +247,30 @@ export default defineConfig({
 ```
 
 ## What is a higher-order function?
+A higher-order function is a function that does at least one of the following:
+Takes another function as an argument (callback).
+Returns a function as its result.
+In short → functions that work with other functions.
+
+3. Built-in JavaScript HOFs
+
+You already use them every day:
+
+map()
+
+filter()
+
+reduce()
+
+forEach()
+
+Example:
+```
+const numbers = [1, 2, 3, 4];
+
+const doubled = numbers.map(num => num * 2);
+console.log(doubled); // [2, 4, 6, 8]
+```
 
     What is currying in JavaScript?
 
