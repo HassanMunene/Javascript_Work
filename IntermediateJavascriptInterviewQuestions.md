@@ -94,7 +94,22 @@ async function fetchData() {
 }
 ```
 
-What is the difference between setTimeout() and setInterval()?
+## What is the difference between setTimeout() and setInterval()?
+1. setTimeout()
+What it does: Executes a function once after a specified delay (in milliseconds).
+```
+setTimeout(() => {
+  console.log("Hello after 2 seconds");
+}, 2000);
+```
+
+2. setInterval()
+What it does: Executes a function repeatedly at fixed intervals (in milliseconds).
+```
+setInterval(() => {
+  console.log("Hello every 2 seconds");
+}, 2000);
+```
 
     What is the difference between localStorage, sessionStorage, and cookies?
 
