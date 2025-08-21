@@ -284,9 +284,61 @@ console.log(doubled); // [2, 4, 6, 8]
 Generators are one of the most powerful yet often underutilized features in JavaScript. Introduced in ECMAScript 2015 (ES6), generators allow you to write functions that can exit and later re-enter, maintaining their context (variable bindings) between re-entries. In this comprehensive guide, we’ll explore what generators are, how they work, and how you can leverage them in your JavaScript and TypeScript projects.
 
 
-    What is the difference between Object.freeze() and Object.seal()?
+## What is the difference between Object.freeze() and Object.seal()?
+In js , Object.seal() and Object.freeze() are methods used to control the mutability of objects. While they both restrict modifications to an object, they have some key differences. Let's explore each method in detail, along with their respective examples:
 
-    What is the Temporal Dead Zone (TDZ) in JavaScript?
+Object.seal():
+Object.seal() is a method that seals an object, preventing the addition or deletion of properties, while allowing the modification of existing properties.
+Sealed objects are still mutable, meaning you can change the values of the existing properties.
+However, you cannot add new properties or remove existing ones.
+The Object.isSealed() method can be used to check if an object is sealed.
+const person = { name: "John", age: 30 };
+
+Object.seal(person);
+
+person.age = 31; // Modifying an existing property is allowed
+console.log(person); // Output: { name: "John", age: 31 }
+
+person.city = "New York"; // Adding new properties is not allowed
+console.log(person); // Output: { name: "John", age: 31 }
+
+delete person.name; // Removing existing properties is not allowed
+console.log(person); // Output: { name: "John", age: 31 }
+
+console.log(Object.isSealed(person)); // Output: true
+2. Object.freeze():
+
+Object.freeze() is a method that freezes an object, making it completely immutable.
+Frozen objects are read-only, and no modifications, additions, or deletions of properties are allowed.
+The Object.isFrozen() method can be used to check if an object is frozen.
+const person = { name: "John", age: 30 };
+
+Object.freeze(person);
+
+person.age = 31; // Modifying properties is not allowed
+console.log(person); // Output: { name: "John", age: 30 }
+
+person.city = "New York"; // Adding new properties is not allowed
+console.log(person); // Output: { name: "John", age: 30 }
+
+delete person.name; // Removing properties is not allowed
+console.log(person); // Output: { name: "John", age: 30 }
+
+console.log(Object.isFrozen(person)); // Output: true
+Key differences:
+
+Object.seal() allows modification of existing properties, but does not permit addition or deletion of properties. Object.freeze(), on the other hand, prevents any modifications, additions, or deletions to properties.
+Object.seal() creates a “sealed” object, while Object.freeze() creates a “frozen” object.
+Sealed objects are still mutable, whereas frozen objects are completely immutable.
+Both methods return the modified object itself.
+Object.seal() allows checking if an object is sealed using Object.isSealed(), and Object.freeze() allows checking if an object is frozen using Object.isFrozen().
+Conclusion : Object.seal() and Object.freeze() are methods in JavaScript that provide different levels of object immutability and control over object modifications.
+
+Object.seal() allows the modification of existing properties while preventing the addition or deletion of properties. Sealed objects are still mutable, and the Object.isSealed() method can be used to check if an object is sealed.
+Object.freeze() creates completely immutable objects where no modifications, additions, or deletions of properties are allowed. Frozen objects are read-only, and the Object.isFrozen() method can be used to check if an object is frozen.
+the choice between Object.seal() and Object.freeze() depends on the desired level of immutability and control required for the object. If you want to allow modification of existing properties but prevent structural changes, Object.seal() is suitable. If you need to create fully immutable objects, ensuring that no modifications are possible, Object.freeze() is the appropriate choice.
+
+## What is the Temporal Dead Zone (TDZ) in JavaScript?
 
     How does JSON.stringify() work? What are its limitations?
 
