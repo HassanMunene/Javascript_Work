@@ -149,6 +149,62 @@ console.log(maxSubarraySum(arr));
 ```
 
 ## Merge two Sorted Arrays
+Given two sorted arrays arr1[] of size n and arr2[] of size m. Merge these two arrays.
+After the merge, the first n smallest elements of the combined sorted array should be stored in arr1[], and the remaining m largest elements should be stored in arr2[]. After the merging process, both arr1[] and arr2[] must remain sorted in non-decreasing order.
+Examples: 
+```
+Input: arr1[] = [1, 3, 4, 5], arr2[] = [2, 4, 6, 8] 
+Output: arr1[] = [1, 2, 3, 4], arr2[] = [4 5, 6, 8] 
+Explanation: Combined sorted array = [1, 2, 3, 4, 4, 5, 6, 8], array arr1[] contains smallest 4 elements: 1, 2, 3, 4, and array arr2[] contains the remaining 4 elements: 4, 5, 6, 8.
+
+Input: arr1[] = [5, 8, 9], arr2[] = [4, 7, 8] 
+Output: arr1[] = [4, 5, 7], arr2[] = [8, 8, 9] 
+Explanation: Combined sorted array = [4, 5, 7, 8, 8, 9], array arr1[] contains smallest 3 elements: 4, 5, 7, and array arr2[] contains the remaining 3 elements: 8, 8, 9.
+```
+
+### [Naive Approach] Concatenate and Sort - O((n + m) log(n + m)) Time and O(n + m) Space
+The idea is to combine both sorted arrays into a single temporary array, then sort this combined array to get all elements in non-decreasing order. Once sorted, the first n smallest elements are copied back into arr1, and the remaining m largest elements are placed into arr2.
+```
+function mergeArrays(arr1, arr2) {
+    let n = arr1.length;
+    let m = arr2.length;
+
+    // temporary array to store all elements 
+    // from arr1 and arr2
+    let merged = new Array(n + m);
+
+    // copy elements from arr1 and arr2 
+    // into merged array
+    for (let i = 0; i < n; ++i) {
+        merged[i] = arr1[i];
+    }
+    for (let j = 0; j < m; ++j) {
+        merged[n + j] = arr2[j];
+    }
+
+    // sort the merged array
+    merged.sort((a, b) => a - b);
+
+    // distribute first n elements to arr1
+    for (let i = 0; i < n; ++i) {
+        arr1[i] = merged[i];
+    }
+
+    // distribute remaining m elements to arr2
+    for (let j = 0; j < m; ++j) {
+        arr2[j] = merged[n + j];
+    }
+}
+
+// Driver Code
+let arr1 = [1, 3, 5, 7];
+let arr2 = [2, 4, 6, 8];
+
+mergeArrays(arr1, arr2);
+
+console.log(arr1.join(' '));
+console.log(arr2.join(' '));
+```
 
     Contains Duplicate
 
