@@ -339,8 +339,14 @@ Object.freeze() creates completely immutable objects where no modifications, add
 the choice between Object.seal() and Object.freeze() depends on the desired level of immutability and control required for the object. If you want to allow modification of existing properties but prevent structural changes, Object.seal() is suitable. If you need to create fully immutable objects, ensuring that no modifications are possible, Object.freeze() is the appropriate choice.
 
 ## What is the Temporal Dead Zone (TDZ) in JavaScript?
+The Temporal Dead Zone (TDZ) refers to the period during which a variable is declared but cannot be accessed. This occurs from the start of the block scope until the variable is initialized. Attempting to access the variable in this “zone” results in a ReferenceError.
 
-    How does JSON.stringify() work? What are its limitations?
+Key Characteristics of the TDZ:
+Variables declared with let or const are hoisted but left uninitialized.
+Accessing these variables before initialization triggers a runtime error.
+The TDZ exists to prevent potential bugs caused by premature access.
+
+## How does JSON.stringify() work? What are its limitations?
 
 Hard Questions (Advanced Topics)
 
