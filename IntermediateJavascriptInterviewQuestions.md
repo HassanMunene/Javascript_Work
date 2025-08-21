@@ -347,6 +347,56 @@ Accessing these variables before initialization triggers a runtime error.
 The TDZ exists to prevent potential bugs caused by premature access.
 
 ## How does JSON.stringify() work? What are its limitations?
+Cloning the objects often becomes a problem for JS programmers. Surprisingly, the second most popular answer to the question `What is the most efficient way to deep clone an object in JavaScript?` is… to JSON.parse(JSON.stringify()) it!
+
+🤯
+
+By the way, I found such a ‘deep cloning’ in my own old code!
+
+Why it can cause problems?
+You can lose your data
+The JSON.stringify() just converts a JavaScript value to a JSON string. It`s ok to use it with some primitives like Numbers, Strings or Booleans.
+
+JSON.parse(JSON.stringify({ a: 1, b: "Hello, world", c: true})) // it`s OK
+But sometimes, JSON.stringify() is a little bit… unpredictable. For instance, something like this seems to be weird:
+
+JSON.stringify({ key: undefined }); // converted to "{}"
+JSON.stringify({ key: Symbol() }); // "{}" again
+JSON.stringify({ key: function(){} }); // "{}" as well
+As you can see, you can just lose data of unsupported types when copying your object in such a way. Moreover, JavaScript won`t even warn you about that, because calling JSON.stringify() with such data types does not throw any error.
+
+By the way, as for me, one of the biggest problems of cloning with JSON.stringify() is that methods are not supported by it
+
+Sometimes, JSON.stringify() pretends to be smart and converts some unsupported data types to supported ones. So, in cases like these, everything will be converted to {"key": null}:
+
+JSON.stringify({ key: Nan }); // {"key": null}
+JSON.stringify({ key: Infinity }); // {"key": null}
+Finally, there is a problem with the Date(). Dates will be parsed as Strings, not as Dates. So, if you store the `Date` in your object and clone using JSON, you will lose them, too.
+
+Get Petro Zubar’s stories in your inbox
+Join Medium for free to get updates from this writer.
+
+Enter your email
+Subscribe
+It is not so quick and efficient
+
+Press enter or click to view image in full size
+
+Looking at some benchmarks, (like this one, or this one) we can see, that cloning with JSON.parse(JSON.stringify()) can be really slow, especially on large objects. I also suggest you read this story about just one line (!!!) of JS code that made a site 10 times slower:
+
+This one line of Javascript made FT.com 10 times slower
+A journey into a performance degradation…
+medium.com
+
+(sorry for the spoiler, but that string was JSON.parse(JSON.stringify()) )
+
+But wait, how to clone the things without “JSONing” them?
+OK, now we see, that cloning by converting and parsing JSON may cause huge problems and become antipattern. Since then, there are better approaches:
+
+(the easiest one) Use jQuery or Lodash implementations of deep cloning
+(2023 update) Use the `structuredClone()` method! It is supported by modern browsers.
+(more interesting) Write your own deep cloning function using recursion (or just google to find some implementations).
+So, every time you need to clone an object, remember, that JSON.parse(JSON.stringify()) may cause problems and you’d better avoid using it.
 
 Hard Questions (Advanced Topics)
 
