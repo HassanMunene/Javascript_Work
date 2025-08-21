@@ -280,7 +280,9 @@ console.log(doubled); // [2, 4, 6, 8]
 
     How does prototypal inheritance work in JavaScript?
 
-    What are generators in JavaScript?
+## What are generators in JavaScript?
+Generators are one of the most powerful yet often underutilized features in JavaScript. Introduced in ECMAScript 2015 (ES6), generators allow you to write functions that can exit and later re-enter, maintaining their context (variable bindings) between re-entries. In this comprehensive guide, we’ll explore what generators are, how they work, and how you can leverage them in your JavaScript and TypeScript projects.
+
 
     What is the difference between Object.freeze() and Object.seal()?
 
