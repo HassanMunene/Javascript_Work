@@ -1,6 +1,7 @@
 # Hard Questions (Advanced Topics)
 
 ## Explain how JavaScript’s garbage collection works.
+Garbage collection in JavaScript simplifies memory management by automatically removing unused objects, preventing memory leaks, and optimizing performance. This reduces development complexity, allowing developers to focus on functionality rather than manual memory handling
 
     What is the difference between macro tasks and micro tasks in the event loop?
 
