@@ -3,7 +3,36 @@
 ## Explain how JavaScript’s garbage collection works.
 Garbage collection in JavaScript simplifies memory management by automatically removing unused objects, preventing memory leaks, and optimizing performance. This reduces development complexity, allowing developers to focus on functionality rather than manual memory handling
 
-    What is the difference between macro tasks and micro tasks in the event loop?
+## What is the difference between macro tasks and micro tasks in the event loop?
+Micro tasks are smaller tasks that should be executed immediately after the currently executing script/before the event loop continues. They have a higher priority than macro tasks. After a macro task finishes, the event loop will empty the entire micro task queue (processing all micro tasks in it) before moving on to the next macro task or rendering.
+
+Common Sources of Micro Tasks:
+
+    Promise callbacks (.then(), .catch(), .finally())
+
+    async/await (the code after an await is effectively a micro task)
+
+    queueMicrotask() API
+
+    MutationObserver (browser API for observing DOM changes)
+
+Macro tasks represent discrete, standalone units of work. The event loop picks one macro task from the macro task queue, executes it completely, then moves on to check the micro task queue before grabbing the next macro task.
+
+Common Sources of Macro Tasks:
+
+    setTimeout()
+
+    setInterval()
+
+    setImmediate() (Node.js)
+
+    I/O operations (e.g., reading files, network requests)
+
+    UI rendering (browsers often do this after each macro task)
+
+    User interaction events (click, scroll, keypress)
+
+
 
     How would you implement a debounce or throttle function?
 
