@@ -59,7 +59,19 @@ The core concept most modern garbage collectors use is reachability.
 
 A memory leak, therefore, occurs when an object that is no longer needed is still unexpectedly "reachable" from the root. The garbage collector sees it as "still in use" and never releases it. Over time, these leaked objects accumulate, increasing memory usage and potentially slowing down or crashing the application.
 
-    Explain how Symbol works in JavaScript.
+## Explain how Symbol works in JavaScript.
+The Symbol is a fundamental primitive data type introduced in ECMAScript 2015 (ES6) that serves a unique purpose: creating completely unique identifiers.
+The Core Concept: Uniqueness
+
+The most important thing to understand about Symbol is that every symbol value returned from Symbol() is unique.
+javascript
+
+const symbol1 = Symbol();
+const symbol2 = Symbol();
+
+console.log(symbol1 === symbol2); // false
+
+Even if you create a million symbols with the same description, no two are equal. This uniqueness is their primary superpower.
 
     How would you implement a custom Promise from scratch?
 
