@@ -40,7 +40,24 @@ In JavaScript, there are two types of references strong and weak. The WeakSet an
 
 ## What is the difference between Proxy and Reflect in JavaScript?
 
-    How does JavaScript handle memory leaks? How would you debug them?
+## How does JavaScript handle memory leaks? How would you debug them?
+JavaScript is a garbage-collected language. This means developers don't manually allocate and free memory. Instead, the JavaScript engine (like V8 in Chrome and Node.js) automatically manages memory through a process called Garbage Collection (GC).
+
+The core concept most modern garbage collectors use is reachability.
+
+    The "Root": There is a base set of inherently reachable values that are guaranteed to be in memory. For example:
+
+        The currently executing function, its local variables, and parameters.
+
+        Other functions and variables in the current call stack.
+
+        Global variables (window in browsers, global in Node.js).
+
+    Reachability: Any value that is accessible or referable from the root (via a reference or a chain of references) is considered "reachable". This is the stuff that must be kept in memory.
+
+    Garbage Collection: The engine runs a garbage collector in the background. It periodically scans memory, finds all objects that are not reachable from the root, and deletes them, freeing up that memory.
+
+A memory leak, therefore, occurs when an object that is no longer needed is still unexpectedly "reachable" from the root. The garbage collector sees it as "still in use" and never releases it. Over time, these leaked objects accumulate, increasing memory usage and potentially slowing down or crashing the application.
 
     Explain how Symbol works in JavaScript.
 
