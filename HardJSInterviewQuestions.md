@@ -33,12 +33,12 @@ Common Sources of Macro Tasks:
     User interaction events (click, scroll, keypress)
 
 
+## How would you implement a debounce or throttle function?
 
-    How would you implement a debounce or throttle function?
+##  Explain how WeakMap and WeakSet work. How are they different from Map and Set?
+In JavaScript, there are two types of references strong and weak. The WeakSet and WeakMap are called weak references. Since these are weak references they do not prevent garbage collection if they are the only reference to the object in the memory. These objects are rarely used but are useful when we want memory usage to be automatically managed.
 
-    Explain how WeakMap and WeakSet work. How are they different from Map and Set?
-
-    What is the difference between Proxy and Reflect in JavaScript?
+## What is the difference between Proxy and Reflect in JavaScript?
 
     How does JavaScript handle memory leaks? How would you debug them?
 

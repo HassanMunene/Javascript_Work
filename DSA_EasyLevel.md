@@ -220,7 +220,7 @@ console.log(arr2.join(' '));
 
 # Linked Lists
 
-    Reverse Linked List
+  ## Reverse Linked List
 
     Merge Two Sorted Lists
 
