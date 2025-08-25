@@ -73,11 +73,11 @@ console.log(symbol1 === symbol2); // false
 
 Even if you create a million symbols with the same description, no two are equal. This uniqueness is their primary superpower.
 
-    How would you implement a custom Promise from scratch?
+## How would you implement a custom Promise from scratch?
 
-    What are Web Workers? How do they work?
+## What are Web Workers? How do they work?
 
-    How does JavaScript’s module system work (ES6 modules vs CommonJS)?
+## How does JavaScript’s module system work (ES6 modules vs CommonJS)?
 
     Explain how Object.defineProperty() works.
 
