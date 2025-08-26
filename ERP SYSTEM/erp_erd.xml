@@ -1,0 +1,332 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="Page-1" id="2cc2d294-239e-2a9c-7b5a-6e9916c39e0e">
+        <mxGraphModel dx="3165" dy="1923" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                
+                <!-- Module Labels -->
+                <mxCell id="adminModule" value="&lt;b&gt;Admin / Security&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrmModule" value="&lt;b&gt;HRM&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="crmModule" value="&lt;b&gt;CRM&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="projectModule" value="&lt;b&gt;Projects&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="40" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="financeModule" value="&lt;b&gt;Finance&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="400" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="commissionModule" value="&lt;b&gt;Commission&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="400" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="dmsModule" value="&lt;b&gt;DMS&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="400" width="120" height="30" as="geometry"/>
+                </mxCell>
+
+                <!-- Admin/Security Entities -->
+                <mxCell id="auth_user" value="auth.user" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin_role" value="admin.role" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin_permission" value="admin.permission" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="admin_audit_log" value="admin.audit_log" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- HRM Entities -->
+                <mxCell id="hrm_person" value="hrm.person" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_employment_contract" value="hrm.employment_contract" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_department" value="hrm.department" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_position" value="hrm.position" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_timesheet_entry" value="hrm.timesheet_entry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_leave_request" value="hrm.leave_request" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_leave_type" value="hrm.leave_type" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="hrm_person_document" value="hrm.person_document" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- CRM Entities -->
+                <mxCell id="crm_company" value="crm.company" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="crm_contact" value="crm.contact" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="crm_opportunity" value="crm.opportunity" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="crm_pipeline_stage" value="crm.pipeline_stage" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="crm_lead" value="crm.lead" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="crm_communication_log" value="crm.communication_log" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- Project Entities -->
+                <mxCell id="project_project" value="project.project" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_project_phase" value="project.project_phase" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_task" value="project.task" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_timelog" value="project.timelog" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_deliverable" value="project.deliverable" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="400" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_risk" value="project.risk" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_issue" value="project.issue" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_change_request" value="project.change_request" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- Finance Entities -->
+                <mxCell id="fin_invoice" value="fin.invoice" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_invoice_line" value="fin.invoice_line" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_payment" value="fin.payment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_journal_entry" value="fin.journal_entry" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_journal_line" value="fin.journal_line" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="800" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_chart_of_accounts" value="fin.chart_of_accounts" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="880" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="fin_tax_rule" value="fin.tax_rule" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- Commission Entities -->
+                <mxCell id="com_rule" value="com.rule" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_earning_line" value="com.earning_line" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_event" value="com.event" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_calculation_run" value="com.calculation_run" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_payout_batch" value="com.payout_batch" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="800" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_payout_line" value="com.payout_line" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="880" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="com_adjustment" value="com.adjustment" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="240" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- DMS Entities -->
+                <mxCell id="dms_document" value="dms.document" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dms_document_version" value="dms.document_version" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dms_template" value="dms.template" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="640" width="120" height="60" as="geometry"/>
+                </mxCell>
+
+                <!-- Relationships -->
+
+                <!-- Admin/Security Relationships -->
+                <mxCell id="user_role_rel" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" edge="1" parent="1" source="auth_user" target="admin_role">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="220" as="sourcePoint"/>
+                        <mxPoint x="430" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="role_permission_rel" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;exitX=0.5;exitY=1;" edge="1" parent="1" source="admin_role" target="admin_permission">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="220" as="sourcePoint"/>
+                        <mxPoint x="430" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- HRM Relationships -->
+                <mxCell id="person_contract_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person" target="hrm_employment_contract">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="dept_position_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_department" target="hrm_position">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="position_person_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_position" target="hrm_person">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="person_timesheet_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person" target="hrm_timesheet_entry">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="timesheet_task_rel" value="&gt;—1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_timesheet_entry" target="project_task">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="person_leave_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person" target="hrm_leave_request">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="leave_type_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_leave_request" target="hrm_leave_type">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="person_document_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person" target="hrm_person_document">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="document_dms_rel" value="—1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person_document" target="dms_document">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- CRM Relationships -->
+                <mxCell id="company_contact_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_company" target="crm_contact">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="company_opportunity_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_company" target="crm_opportunity">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="opportunity_stage_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_opportunity" target="crm_pipeline_stage">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="lead_opportunity_rel" value="0..1 —&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_lead" target="crm_opportunity">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="comm_log_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_communication_log" target="crm_contact">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- Project Relationships -->
+                <mxCell id="project_phase_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="project_project_phase">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="phase_task_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project_phase" target="project_task">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="task_timelog_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_task" target="project_timelog">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="timelog_person_rel" value="&gt;—1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_timelog" target="hrm_person">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_deliverable_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="project_deliverable">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="deliverable_dms_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_deliverable" target="dms_document">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_risk_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="project_risk">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_issue_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="project_issue">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_change_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="project_change_request">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- Finance Relationships -->
+                <mxCell id="invoice_line_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_invoice" target="fin_invoice_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="invoice_line_source_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_invoice_line" target="project_project">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="payment_invoice_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_payment" target="fin_invoice">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="journal_entry_line_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_journal_entry" target="fin_journal_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="journal_line_account_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_journal_line" target="fin_chart_of_accounts">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="tax_rule_rel" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="fin_tax_rule" target="fin_invoice_line">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="220" as="sourcePoint"/>
+                        <mxPoint x="430" y="170" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+
+                <!-- Commission Relationships -->
+                <mxCell id="rule_earning_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_rule" target="com_earning_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="earning_event_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_earning_line" target="com_event">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="calc_run_earning_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_calculation_run" target="com_earning_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="payout_batch_line_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_payout_batch" target="com_payout_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="payout_line_person_rel" value="&gt;—1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_payout_line" target="hrm_person">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="adjustment_earning_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="com_adjustment" target="com_earning_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- DMS Relationships -->
+                <mxCell id="document_version_rel" value="1—&lt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="dms_document" target="dms_document_version">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+
+                <!-- Cross-Module Relationships -->
+                <mxCell id="company_project_rel" value="—1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="crm_company" target="project_project">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="project_invoice_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_project" target="fin_invoice">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="invoice_event_rel" value="&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fin_invoice" target="com_event">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="person_timelog_rel" value="—&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hrm_person" target="project_timelog">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="timelog_invoice_rel" value="—&gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="project_timelog" target="fin_invoice_line">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
