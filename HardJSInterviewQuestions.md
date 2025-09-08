@@ -109,7 +109,8 @@ Very Hard / System Design & Tricky Questions
 
     What are tagged template literals? How are they useful?
 
-    How would you implement a secure authentication system in JavaScript?
+# How would you implement a secure authentication system in JavaScript?
+
 
 Bonus: Problem-Solving & Coding Challenges
 
