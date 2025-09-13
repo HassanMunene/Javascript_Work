@@ -15,4 +15,5 @@ A partener to help the company scale and has low latency levels. Very high trans
 talking about being able to run credit scores for farmers, make transactions to farmers. being able to link the farmers to the buyers. 
 
 How shamba records is using Hedera:
-1. onChange tracebaility, Hedera filing system each and every collection is backed up by a blockchain Id. You can trace from the source to the market. 
+1. onChange tracebaility, Hedera filing system each and every collection is backed up by a blockchain Id. You can trace from the source to the market.
+2. providing the farmer Wallet, the farmers can get instant payment, and cut the period of their payment from 90 days to just 1 minute. 
