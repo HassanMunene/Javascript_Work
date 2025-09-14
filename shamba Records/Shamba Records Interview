@@ -42,18 +42,28 @@ From what I understand, Shamba Records is solving one of the biggest challenges 
 - credit - using digitized farm records to build a digital credit profile and credit score
            which then unlocks loans for various farming needs This data-driven approach bypasses the need for traditional collateral, like land titles, and instead assesses a farmer's creditworthiness based on their farm performance, productivity, and transaction history.
         
-- reliable markets. Many farmers have to wait up to 90 days to get paid, which creates a huge financial burden. Shamba Records solves this by providing a farmer wallet that enables instant payments. They’re also tackling the issue of traceability by using Hedera’s blockchain, so buyers can trust the origin of produce and farmers can meet compliance standards. On top of that, Shamba Records helps farmers unlock new credit lines, access carbon credit markets, and connect directly to buyers, which ultimately increases their income and makes farming more sustainable. At the heart of it, the company is making sure technology directly improves the livelihoods of smallholder farmers.
+- reliable markets.
+Many farmers have to wait up to 90 days to get paid, which creates a huge financial burden. Shamba Records solves this by providing a farmer wallet that enables instant payments. They’re also tackling the issue of traceability by using Hedera’s blockchain, so buyers can trust the origin of produce and farmers can meet compliance standards. On top of that, Shamba Records helps farmers unlock new credit lines, access carbon credit markets, and connect directly to buyers, which ultimately increases their income and makes farming more sustainable. At the heart of it, the company is making sure technology directly improves the livelihoods of smallholder farmers.
 
 3 How do you think technology can transform agriculture in Africa?
-- I believe technology can completely transform agriculture in Africa by making it more efficient, transparent, and profitable for farmers. For example, digital wallets and mobile money can ensure farmers get paid instantly rather than waiting months. Blockchain can provide traceability, helping farmers meet export standards and tap into global markets. AI can help predict weather patterns, detect crop diseases early, and guide farmers on the best farming practices. Even simple offline-first tools using USSD or SMS can give smallholder farmers access to market prices, credit, and insurance without needing a smartphone. In short, technology can bridge the gap between farmers and opportunities — turning agriculture into a more sustainable and attractive livelihood while ensuring food security for a fast-growing population.
+- I believe technology can completely transform agriculture in Africa by making it more efficient, transparent and profitable for farmers. For example, digital wallets and mobile money can ensure farmers get paid instantly rather than waiting months. Blockchain can provide traceability, helping farmers meet export standards and tap into global markets. AI can help predict weather patterns, detect crop diseases early, and guide farmers on the best farming practices. Even simple offline-first tools using USSD or SMS can give smallholder farmers access to market prices, credit, and insurance without needing a smartphone. In short, technology can bridge the gap between farmers and opportunities — turning agriculture into a more sustainable and attractive livelihood while ensuring food security for a fast-growing population.
 
 Why are you interested in combining software engineering with agriculture/impact-driven solutions?
 
-What excites you the most about blockchain/AI/fintech in agriculture?
+
+## What excites you the most about blockchain/AI/fintech in agriculture?
+
+Blockchain offers a tamper proof, transparent way to track a crops journey from seedling to store on a shelf
+it is a new trust layer in food system long plagued by opacity. and for farmers it more than a technology but a voice.
+
+for Example there are new regulations from EU taking effect from 2025 demands that proof that products like
+coffee are grown without deforestation. and Mind you EU import close to 7.5 billion euros worth of agriculture
+from Africa annually. Thats all dependes on tracebility at the moment. 
 
 🔹 Company-Specific
 
 How do you think Shamba Records’ farmer wallet improves farmers’ lives?
+
 
 Why do you think they chose Hedera (instead of Ethereum or another blockchain)?
 
