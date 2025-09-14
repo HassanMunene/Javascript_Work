@@ -41,3 +41,15 @@ HIGH Level:
 CORE Components of the Architecture
 Frontend: We could use USSD / light mobile app or web app
 API Gateway: Single entry 
+
+I would design a backend that has a database to keep track of farmers, their wallets and transactions. To make the transcation secure every transcation will have a unique ID. That way if the same payment request comes twice, we dont process it twice. I would also make sure each transaction updates the farmers balance, so it always remains consistent. Because this needs scaling for thiusands of farmers we could create api endpoints for creating farmers handling transactions, checking balances. As the system grows we can add more features like caching, for quick or syncing with blockchain for tracebalitiy
+
+Just like other normal applications, blockchains expose APIs instead of calling maybe GET /users we call blockcain nodes through APIs or SDKs 
+With Hedera they provide, 
+
+Most blockchain powered application follow this Pattern:
+Your App/Backend has farmers, wallets, balances in your DB
+Blockchain API: you send a transaction to Hedera eg record this farmers payment generate a blockchain ID.
+Blockchain ledger stores a proof of records that cannot be changed. 
+you save the blockchain ID in our db for traceability. 
+Blockchain is the invisible trust layer
