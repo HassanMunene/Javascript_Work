@@ -69,7 +69,6 @@ from Africa annually. Thats all dependes on tracebility at the moment.
 🔹 Technical Questions
 
 
-How would you design a system to track transactions for thousands of farmers reliably?
 
 What’s your experience with databases? Which would you choose for farmer records and why?
 
@@ -96,3 +95,8 @@ Where do you see the biggest opportunity for tech in agriculture in the next 5 y
 If given freedom, what feature would you add to the Shamba Records platform?
 
 How would you make sure even farmers without smartphones can benefit from Shamba’s services?
+
+I'm told that European Union Deforestation Regulation (EUDR) body 
+is conducting some serious geo mapping for farmers across the country(Kenya), 
+taking coordinates, photos and farmers' biometrics using an app called Kobo Collect
+ for "traceability" purposes. Does this make sense?

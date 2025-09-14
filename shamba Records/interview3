@@ -29,3 +29,15 @@ We designed two dashboards: one for the company (to manage products, sales, and 
 My role involved working with APIs for payments, designing the database to handle license keys (both sold and unsold), and integrating email notifications so that customers received their product instantly after payment. I also worked on parts of the partner dashboard where they could log in, view earnings, and request withdrawals.
 
 In the end, we had a working platform where the company could manage sales, partners could earn passive income through commissions, and customers could get their Kaspersky products instantly. It solved the problem of manual sales and brought efficiency, transparency, and scale to the whole process.
+
+## How would you design a system to track transactions for thousands of farmers reliably?
+HIGH Level:
+1. Ensure correctness and durability. ensure that there will be no duplicate. 
+2. Ensure that the system is scalable it can handle thousands or hundred of thousands.
+3. Low latency very quick to provide feedback like queriy balance make payments
+4. Should be auditable and traceable. you can get a full history for compliance purposes
+5. Should be resilient to offline and poor internet.
+
+CORE Components of the Architecture
+Frontend: We could use USSD / light mobile app or web app
+API Gateway: Single entry 
