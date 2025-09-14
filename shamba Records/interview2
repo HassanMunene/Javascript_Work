@@ -7,4 +7,15 @@ Ethereum is one of the most popular blockchains, but it can be slow and expensiv
 on Block chains like Ethereum every time you make a transaction eg sending money or recording data you pay a fee. That fee is called Gas fee. It is basically the cost of using the blockshain. The problem is that these gas fees are usually expensive on Ethereum. For a farmer who just want to receive a 10 dollar payment, paying a 3 dollar gas fee doesnt really make sense and thats why shamba records decided to go with Hedera which has low gas fees and predictable transactions. 
 
 ## What is a blockchain wallet?
+A wallet is like a digital bank account for blockchain, its lets you store, send or receive money or digital assets like stable coins or even carbon credits. For shamba records farmer wallet is where farmers instantly recieve payments. Honestly its built in such an easy way that farmers dont need to be expert on the whole blockchain infrastructure. It does not rely on middleman. 
 
+So the wallet is built on Hedera. Transactions run on Hedera network. farmers get instant payment.
+Stable coins are used inside the wallet. so farmers dont have to worry about crypto prices swings they receive the exact payment they expect.
+
+Normal crypto currencies go up and down in prices all the time. and thats too risky for farmers honestly. stable coins are digital assets that are pegged to a stable asset usually the us dollar. I us dollar == 1 stable coin. 
+
+## Tracebility in Shamba Records. 
+Meaning you can trace a product from the source all the way to the market.
+With the help of Hedera shamba records. Every farmers collection like tea, coffee, is recorded on the blockchain and gets a unique ID. This ID This ID makes it possible to prove where the produce came from, when it was harvested, and by whom.
+
+That’s important for export compliance, for buyers who want to be sure they’re getting authentic products, and even for things like carbon credit verification.
