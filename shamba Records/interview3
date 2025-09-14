@@ -53,3 +53,4 @@ Blockchain API: you send a transaction to Hedera eg record this farmers payment 
 Blockchain ledger stores a proof of records that cannot be changed. 
 you save the blockchain ID in our db for traceability. 
 Blockchain is the invisible trust layer
+
