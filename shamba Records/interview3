@@ -1,0 +1,31 @@
+## How would you explain Shamba’s solution to a small-scale farmer with no tech background?
+
+Instead of using technical terms like blockchain I would simply tell the farmer that Shamba records helps you get paid instantly when you sell your produce, instead of waiting for months 
+With shamba records we also ensure that your produce reaches better markets even for exports because with shamba records buyers can trace where the produce comes from, and how it is impacting the enviroment and hence builds trust. 
+With shamba records you can access microloans without even needing the collateral that banks required, we just use credit scores based on your performance and get the loan
+
+## What challenges do you see in building offline-first solutions for rural farmers?
+Many farmers really dont have smartphones and even if they do then the internet is sure not reliable or even the electricity to charge the smartphones. That means in this case a better solution would be based on the very basic phones. maybe through USSD or sms and still be secure. 
+Another challenge is making the sytem easy to use. the interface has to be extremely simple for the farmers and lastly this is what bugs me data syncronization. when a farmer uses the system offline, the information still has to sync correctly once they are online again. 
+
+## USSD - Unstructured Supplementary Service Data
+You dial short code like *144# to access services. they can use ussd to check their payments, 
+
+## An example is farmer checking wallet balance using USSD
+Maybe for exmaple a farmer dials *234# on their phone 
+```
+Welcome to Shamba Records
+1. Check Wallet Balance
+2. Withdraw Money
+3. View Market Prices
+4. Get Credit/Loans
+```
+
+## Can you walk us through a project you’ve built that involved APIs, databases, or payment systems?
+While I was at Lakewood Crystal Group, the company got into a partnership with Kaspersky in South Africa. They would sell bulk software licenses to us at a discount, and our job was to resell them in Kenya. To make this scalable, I was part of a project to design and build a reseller platform — not only for the company itself, but also to allow third-party partners to join, sell products, and earn commissions.
+
+We designed two dashboards: one for the company (to manage products, sales, and partners) and another for partners (to track their earnings, commissions, and make withdrawals). Since the products were digital licenses, we had to fully automate the sales flow: once a customer purchased online, the system would process the payment, allocate a license key from our database, and automatically send it to the customer’s email.
+
+My role involved working with APIs for payments, designing the database to handle license keys (both sold and unsold), and integrating email notifications so that customers received their product instantly after payment. I also worked on parts of the partner dashboard where they could log in, view earnings, and request withdrawals.
+
+In the end, we had a working platform where the company could manage sales, partners could earn passive income through commissions, and customers could get their Kaspersky products instantly. It solved the problem of manual sales and brought efficiency, transparency, and scale to the whole process.
