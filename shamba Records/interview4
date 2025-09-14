@@ -1,0 +1,13 @@
+## How to explain USSD integration (high-level, interview style)
+Most farmers dont have smartphone or internet majority have basic phones, with ussd a farmer can dial something like *123# to get a simple text menu to check their wallet balance. withdraw money or even see the available products.
+
+On the backend the USSD provider like safaricom connects to our backend or our servers through APIs. When a farmer dials a code the request goes to safaricom, safaricom forwards the request to our backend our backend looks up and returns the response. 
+
+So if the farmer sends something like check balance, our API queries the wallets table. in the database, 
+
+I haven’t personally implemented USSD before, but I understand the flow: telcos like Safaricom provide APIs that link the farmer’s USSD input to our backend. Since I’ve already worked with APIs and databases in past projects, I’d be confident I can pick up USSD integration quickly with guidance from the team.
+
+## What’s your experience with databases? Which would you choose for farmer records and why?
+For the cybill software project, I built tables for patrner, tables to store trascations and license of kaspersky. and transactions so that the system could track commissions and sales reliably. 
+
+For farmers records I would use a relational database like Mysql or Postgres. The reason is farmer data involves structured records. eg farmer details, wallets, transactions and market orders. which all need very clear relationships. 
