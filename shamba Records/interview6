@@ -8,3 +8,11 @@ I want to intern at Shamba Records because I truly believe in the mission of the
 
 What excites me about Shamba Records is how you’re using technology—digital records, data, and financial innovation—to address those exact challenges. As a software developer, I want to apply my skills to something meaningful, and helping farmers gain access to credit, reduce risks, and improve productivity is a mission I deeply connect with.
 
+## What excites you about using technology to solve agricultural challenges?
+What excites me most is the chance to use technology to solve problems that directly affect people’s lives. Agriculture is not just another sector—it’s the backbone of food security and livelihoods for millions of families, especially in Africa. Small innovations in technology can make huge differences: for example, digital records can help farmers prove their credibility, mobile payments can give them faster access to credit, and data analytics can help them plan for weather or market shifts.
+
+As a software developer, I’m excited about how something I build on a screen can translate into real impact in the field—helping a farmer get a fair price, reduce risks, or secure a loan they couldn’t access before. That combination of technology and tangible human impact is what motivates me to work in this space.
+
+## If you were tasked with helping farmers access the products more easily, what would you build?
+I would focus on building a simple and accessible channel that meets the farmers where they are. Majority of the farmers probably dont have smartphones and also in rural areas the internet coverage is that much yet. So what I would is deign a USSD service we can use any of the ussd providers we have then connect it to our backend for both web and mobile just to ensure that the data stays syncrinized. 
+SO maybe if a farmer wants to check their wallet balance they can just dial a code and they get the response instantly. 
