@@ -7,17 +7,6 @@ Sure I implemented a role based access by creating two middlewares in the backen
 So the authentication is to check the JSON web token is valid. The token has been signed by the user Id so when we decode the token get the user id we then fetch the user from the db using the user Id. then we attach that user user to the request object to be used,
 The next middlware is the Authorization MIddleware so endpoints that are wrapped by this middleware cannot be acessed by users who dont have the role of ADMIN.
 
-        Prepare: Be ready to explain your code line-by-line. Why did you choose that specific approach? What were the trade-offs? Discuss the architecture, data structures, and algorithms you used.
-
-        Pro Tip: Mention any alternative solutions you considered and why you rejected them. This shows depth of thought.
-
-    "How would you test your code to ensure it's robust?"
-
-        Prepare: Talk about unit tests, integration tests, and edge cases (e.g., bad inputs, network failures, empty data sets). Since they deal with financial transactions for farmers, stress the importance of accuracy and security.
-
-    "How would you improve the scalability of your solution if we had to onboard 100,000 farmers tomorrow?"
-
-        Prepare: This is where you talk about databases, caching, load balancers, and asynchronous processing. Given their use of Hedera, you could say, "I'd leverage the high throughput and low latency of the Hedera network to ensure transactions remain fast and cheap even at scale."
 
 2. Blockchain & Hedera-Specific Questions
 
@@ -27,7 +16,15 @@ You've done your homework here. They will definitely test your understanding.
 
         Your answer should hit: Immutability (trust in the data from farm to market), Transparency (everyone in the chain can verify), Decentralization (no single point of failure or control), and Smart Contracts (for instant payments/wallets, cutting out the 90-day delay).
 
-    "What do you know about Hedera Hashgraph, and why do you think we chose it over another blockchain like Ethereum or Bitcoin?"
+## What do you know about Hedera Hashgraph, and why do you think we chose it over another blockchain like Ethereum or Bitcoin?"
+It is a distributed legder technology similar to blockchain but instead of using blocks it uses direct Acylic Graph structure which enables transaction to be achieved in parallel making it more faster and efficient than tranditional blocks. 
+
+Hedera has low gas fees. Something like ethreum the transaction fees can be very high but with hederas low transaction fees it makes it possible to records lots of small transactions for farmers.
+Hedera has very high throughput. It can handle many transactions very fast compared to ethereum and 
+
+Is is Energy efficient. The consensus algorithm in Hedera is proof of stake compared to ethereums proof of work.  which  is more energy intensve. 
+
+It makes sense to use Hedera because of the small transactions that farmers make. and we need speed when scaling the fees are also very low so this makes Shamba records system practical. 
 
         Your answer (based on your research): "From my research, I saw you use the Hedera network. I believe the choice was driven by its high transaction speed (low latency) and very low fees, which is critical for micro-transactions and credit scoring for farmers. It's also highly scalable, which aligns with your goal of serving millions of farmers. Unlike Proof-of-Work blockchains, its consensus mechanism is more energy-efficient, which is a good brand fit for agriculture."
 
