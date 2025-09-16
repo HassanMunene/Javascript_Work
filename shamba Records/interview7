@@ -12,3 +12,11 @@ The reason why I believe that this technology is revolutionaly especially to far
 Blockchain solves this by crating an immutable journey for every sack produced. 
 
 From the Seed to the Shelf.
+
+## How CybillSoftware was delopyed
+It was deployed on 
+
+## Containerization
+This is the practise of packaging an application togethere with all it dependencies and its configurations into a container. This will ensure that the application will run consistently across diffeent environment. The advantege of containers is very clear especially when its comes to scaling. if the traffic spikes we can just spin up another instance of our application 
+
+it is like a portable mini computer that will always run the same, whether you are on laptop, render, aws, digital ocean. 

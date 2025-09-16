@@ -1,0 +1,72 @@
+# Deep Dive into Your Assessment & Technical Skills
+
+1. This is the core of a software engineer interview. They've seen your code; now they want to understand your thinking.
+
+## Walk us through your submission for the technical assessment."
+Sure I implemented a role based access by creating two middlewares in the backend. One middleware was to authenticate that actually the user trying to access a certain and the other middleware is for Authorization. So Authenitcation and Authorization. And because we only have two roles at the moment we just had to wrap whatever eendpoint.
+So the authentication is to check the JSON web token is valid. The token has been signed by the user Id so when we decode the token get the user id we then fetch the user from the db using the user Id. then we attach that user user to the request object to be used,
+The next middlware is the Authorization MIddleware so endpoints that are wrapped by this middleware cannot be acessed by users who dont have the role of ADMIN.
+
+        Prepare: Be ready to explain your code line-by-line. Why did you choose that specific approach? What were the trade-offs? Discuss the architecture, data structures, and algorithms you used.
+
+        Pro Tip: Mention any alternative solutions you considered and why you rejected them. This shows depth of thought.
+
+    "How would you test your code to ensure it's robust?"
+
+        Prepare: Talk about unit tests, integration tests, and edge cases (e.g., bad inputs, network failures, empty data sets). Since they deal with financial transactions for farmers, stress the importance of accuracy and security.
+
+    "How would you improve the scalability of your solution if we had to onboard 100,000 farmers tomorrow?"
+
+        Prepare: This is where you talk about databases, caching, load balancers, and asynchronous processing. Given their use of Hedera, you could say, "I'd leverage the high throughput and low latency of the Hedera network to ensure transactions remain fast and cheap even at scale."
+
+2. Blockchain & Hedera-Specific Questions
+
+You've done your homework here. They will definitely test your understanding.
+
+    "In your own words, why do you think blockchain is a good fit for the problems Shamba Records is solving?"
+
+        Your answer should hit: Immutability (trust in the data from farm to market), Transparency (everyone in the chain can verify), Decentralization (no single point of failure or control), and Smart Contracts (for instant payments/wallets, cutting out the 90-day delay).
+
+    "What do you know about Hedera Hashgraph, and why do you think we chose it over another blockchain like Ethereum or Bitcoin?"
+
+        Your answer (based on your research): "From my research, I saw you use the Hedera network. I believe the choice was driven by its high transaction speed (low latency) and very low fees, which is critical for micro-transactions and credit scoring for farmers. It's also highly scalable, which aligns with your goal of serving millions of farmers. Unlike Proof-of-Work blockchains, its consensus mechanism is more energy-efficient, which is a good brand fit for agriculture."
+
+    "How would you explain our farmer wallet and the concept of stablecoins to a non-technical farmer?"
+
+        Your test: This is a perfect chance to use your analogy skills. "I'd say it's a secure digital purse on your phone. When you sell your crops, the buyer doesn't send you cash that can change value overnight; they send you digital tokens that are permanently pegged to the Kenyan Shilling. This means you get paid the full amount instantly, and its value doesn't go up or down before you spend it."
+
+3. Behavioral & Mission-Driven Questions
+
+They need to know you care about the why, not just the how.
+
+    "Why do you want to work at Shamba Records specifically, and not just any other tech company?"
+
+        Your answer: "I'm not just looking for a software job; I'm looking for a role where my technical skills can have a tangible, positive impact. The mission of increasing farmer income by 30% and unlocking credit for them is incredibly motivating. I want to build technology that truly matters and serves a foundational part of our economy."
+
+    "Tell us about a time you faced a technical challenge on a project. How did you overcome it?" (Use the STAR method: Situation, Task, Action, Result)
+
+    "The founder mentioned a focus on 'hyper-local' and offline-first solutions. How would you approach designing an app for users with low-tech smartphones or poor connectivity?"
+
+        Your answer: This shows product sense. Talk about Progressive Web Apps (PWAs), offline-first data synchronization, using SMS-based USSD menus as a fallback, and a super simple user interface (UI) that prioritizes clarity over complex features.
+
+4. Problem-Solving & Conceptual Questions
+
+    "How would you design a system to track a crop from a specific farmer to an international buyer?"
+
+        Walk them through: Farmers get a unique ID. Each batch of crops gets a QR code. At each step (collection, transport, quality check), the QR is scanned, and that event is written as an immutable transaction to the Hedera ledger. The buyer can scan the final product to see its entire verified history.
+
+    "What are the potential risks of using blockchain and stablecoins in this context, and how would you mitigate them?"
+
+        Your answer: User Education (preventing phishing scams), Key Management (how do farmers securely store their wallet keys?), Regulatory changes. Mitigation: simple educational materials, perhaps custodial wallet solutions for beginners, and working closely with regulators.
+
+Questions for YOU to Ask Them
+
+Always have 2-3 thoughtful questions ready. It shows engagement.
+
+    "You mentioned the farmer wallet and instant payments. What has been the biggest user adoption challenge you've faced with getting farmers to trust and use a digital wallet?"
+
+    "Could you tell me more about the tech stack the engineering team uses day-to-day?"
+
+    "What does success look like for this internship role in the first 3 months?"
+
+You've done the hard work, mate. You understand their mission and their technology. Now, just practice articulating it clearly and passionately. Good luck! You've got this.
