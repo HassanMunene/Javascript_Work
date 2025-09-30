@@ -166,7 +166,7 @@ Best Practices
 These keywords are used for variable declaration, but they differ in scoping, hoisting, and mutability.
 
 1. var (Legacy, Avoid in Modern Code)
-    Scope: Function-scoped (or global if declared outside a function).
+    Scope: Function-scoped or global if declared outside a function.
     Hoisting: Hoisted and initialized with undefined.
     Reassignment: Allowed.
     Redeclaration: Allowed (can cause bugs).
@@ -290,6 +290,9 @@ In JavaScript, the this keyword refers to the context in which a function is exe
     const alice = new Person("Alice");
     console.log(alice.name); // "Alice"
     ```
+
+A link to the usage of this keyword and how call, apply and bind fit into this whole ecosystem:
+https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
 5. Explicit Binding (Using call, apply, bind)
     You can force this to refer to a specific object using:
