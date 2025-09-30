@@ -295,6 +295,24 @@ A link to the usage of this keyword and how call, apply and bind fit into this w
 https://medium.com/@omergoldberg/javascript-call-apply-and-bind-e5c27301f7bb
 
 5. Explicit Binding (Using call, apply, bind)
+```
+
+var pokemon = {
+    firstname: 'Pika',
+    lastname: 'Chu ',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
+};
+
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+
+pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
+pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
+```
     You can force this to refer to a specific object using:
     call() & apply() (immediate execution)
     bind() (returns a new function with bound this)
