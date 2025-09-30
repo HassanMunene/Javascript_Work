@@ -1,7 +1,7 @@
 # Arrays & Strings
     
 ## Two Sum
-the Two Sum problem is a classic Data Structures & Algorithms (DSA) question that’s also a gateway into recognizing problem-solving patterns you’ll see again and again. Let’s break it down properly:
+1. The Two Sum problem is a classic Data Structures & Algorithms (DSA) question that’s also a gateway into recognizing problem-solving patterns you’ll see again and again. Let’s break it down properly:
 
 Given an array of integers nums and a target integer target, return indices of the two numbers such that they add up to target.
 
@@ -12,7 +12,7 @@ nums = [2, 7, 11, 15], target = 9
 Output: [0, 1]  // because nums[0] + nums[1] = 2 + 7 = 9
 ```
 
-🔹 Naive Approach (Brute Force)
+Naive Approach (Brute Force)
 Loop over each pair and check if they add to target.
 Time complexity: O(n²)
 

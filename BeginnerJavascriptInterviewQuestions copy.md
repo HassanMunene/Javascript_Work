@@ -25,25 +25,27 @@ JavaScript has two main categories of data types:
 1. Primitive (Value) Types (Immutable)
 
 These are the most basic data types, stored directly in memory.
-Type	Description	Example
-string	Text data	"Hello", 'JS'
-number	Numeric values (integers & decimals)	42, 3.14, NaN
-boolean	Logical true or false	true, false
+Type	    Description	Example
+string	    Text data	"Hello", 'JS'
+number	    Numeric values (integers & decimals)	42, 3.14, NaN
+boolean	    Logical true or false	true, false
 undefined	A variable declared but not assigned	let x; → x is undefined
-null	Intentional absence of a value	let y = null;
-symbol	Unique, immutable identifier (ES6)	Symbol('id')
-bigint	Large integers (ES2020)	12345678901234567890n
+null	    Intentional absence of a value	let y = null;
+symbol	    Unique, immutable identifier (ES6)	Symbol('id')
+bigint	    Large integers (ES2020)	12345678901234567890n
+
 2. Non-Primitive (Reference) Types (Mutable)
 
 These are objects and are stored by reference.
-Type	Description	Example
-object	Key-value pairs	{ name: "Alice", age: 25 }
-array	Ordered lists	[1, 2, 3]
+Type	    Description	Example
+object	    Key-value pairs	{ name: "Alice", age: 25 }
+array	    Ordered lists	[1, 2, 3]
 function	Callable objects	function greet() { ... }
+
 Key Differences: Primitive vs. Non-Primitive
-Feature	Primitive	Non-Primitive
-Mutability	Immutable (can’t change)	Mutable (can change)
-Storage	Stored by value	Stored by reference
+Feature	Primitive	          Non-Primitive
+Mutability	                  Immutable (can’t change)	Mutable (can change)
+Storage	Stored by value	      Stored by reference
 Comparison	Compared by value (5 === 5)	Compared by reference ({} !== {})
 
 
