@@ -428,6 +428,7 @@ function outer() {
 const closureFunc = outer(); // outer() has finished executing...
 closureFunc(); // But this still logs: "I'm outside!" (because of closure)
 ```
+
 ### Why Closures Are Useful:
 Data Privacy – Encapsulate variables that shouldn't be exposed.
 ```
@@ -518,6 +519,22 @@ In JavaScript, call(), apply(), and bind() are methods used to control the value
 call()	Calls a function immediately with a given this value and individual arguments.	func.call(thisArg, arg1, arg2, ...)	Takes arguments one by one.
 
 apply()	Calls a function immediately with a given this value and arguments as an array.	func.apply(thisArg, [arg1, arg2])	Takes arguments as an array.
+
+var pokemon = {
+    firstname: 'Pika',
+    lastname: 'Chu ',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
+};
+
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+
+pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
+pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
 
 bind()	Returns a new function with a bound this value (does not call immediately).	const newFunc = func.bind(thisArg)	Arguments can be passed later.
 
