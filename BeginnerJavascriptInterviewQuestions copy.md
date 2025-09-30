@@ -87,9 +87,7 @@ Key Properties of NaN
 1. undefined (Default Empty Value)
     Meaning: A variable is declared but not assigned a value.
     Type: typeof undefined → "undefined"
-    Common Causes:
-        A variable is declared but not initialized.
-        javascript
+    Common Causes: A variable is declared but not initialized. javascript
 ```
 let x;
 console.log(x); // undefined
@@ -125,12 +123,12 @@ Indicating no object where one is expected. javascript
         document.getElementById("non-existent-id"); // null
 
 Key Differences
-Feature	undefined	null
-Default State	Assigned by JS when no value is given	Must be explicitly set
-Type	"undefined"	"object" (bug)
-Use Case	Missing/unknown value	Intentional empty value
-Equality Check	undefined == null → true (loose)	undefined === null → false (strict)
-When to Use Which?
+Feature	
+undefined	                            null
+Default State when no value is given	Must be explicitly set
+Type "undefined"	                    Type "object" (bug)
+Missing/unknown value	                Intentional empty value
+
 
 ✅ Use undefined when:
     A variable or property naturally has no value yet.
